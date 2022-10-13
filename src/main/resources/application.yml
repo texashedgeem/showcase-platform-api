@@ -1,0 +1,19 @@
+server:
+  max-http-header-size: 48000
+  port: 8090
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+spring:
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:9233/showcase-platform-db
+    username: local
+    password: local
